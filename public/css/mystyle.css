@@ -1,0 +1,2385 @@
+  @font-face 
+        {
+            src: url('../font/IndustryIncW00Base.ttf');
+            font-family: 'Industry Inc';
+            font-style: normal;
+        }
+
+html 
+        {
+	       position: relative;
+	       min-height: 100%;
+        }
+        
+    body
+        {
+            background: url('../images/PS.png') no-repeat 50% 30%;
+            background-attachment: fixed;
+            background-color:#363636;
+            font-family: Industry Inc;
+            font-size: 12pt;
+            color:#000; 
+            margin-bottom: 10px;
+        }
+        
+    h1
+        {
+            background-color: #676767;
+            font-size: 20pt;
+            color:#fff;
+            padding: 5px 5px;
+            margin: 20px -10px;
+            display: block;
+        }
+
+    h2
+        {
+            font-family: Industry Inc;
+            text-align: center;
+            display: block;
+        }
+
+    h3
+        {
+            font-family: Industry Inc;
+            text-align: center;
+            display: block;
+            border-bottom: 1px solid #232323;
+        }
+
+    h4  
+        {
+            font-family: Industry Inc;
+            text-align: center;
+            display: block;
+            background:#1f1f1f;
+            color:#fff;
+            margin: 0;
+            font-size: 18pt;
+        }   
+
+    h5
+        {
+            font-family: Industry Inc;
+            text-align: center;
+            display: block;
+            background:#1f1f1f;
+            color:#fff;
+            border-bottom: 1px dashed #323232;
+            line-height: 15px;
+            margin: 0;
+            padding: 0;
+            vertical-align: top;
+            letter-spacing: 2px;
+        }
+
+    h6
+        {
+            font-family: Industry Inc;
+            width: 95%;
+            font-size: 18pt;
+            text-align: center;
+            display: block;
+            background:#ccc;
+            color:#000;
+            border: 2px solid #676767;
+            margin: 0;
+            padding: 0;
+            border-radius: 10px;
+        }
+
+    .title
+        {
+            font-family: Industry Inc;
+            text-align: center;
+            font-size: 35pt;
+            display: block;
+            padding-bottom: 5px;
+        }
+
+/*
+    First row of the top bar
+*/
+        
+    .manager
+        {
+            display: block;
+            list-style-type: none;
+            width: 100%;
+            text-align: right; 
+            margin-left: -15px;
+            margin-top: 0;
+            height: 25px;
+            color:#fff;
+        }
+
+/*
+    Second row of the top bar container
+*/
+    .bar-container
+        {
+            width: 100%;
+            display: table;
+        }
+        
+    .logo
+        {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            float: left;
+            text-align: center;
+            margin-top: -15px;
+            padding-left: 0px;
+            padding-right: 0px;
+            margin-right: 40px;
+            margin-left: 55px;
+            background:#000;
+            z-index: 1;
+            
+        }
+
+    .logo img
+        {
+            width: 150px;
+            height: auto;
+        }
+        
+    .about
+        {
+            font-size: 15pt;
+            width: 100%;
+            text-align: right;
+            padding-top: 4px;
+            margin-left: -40px;
+        } 
+
+    .result
+        {
+            width: 100%;
+            vertical-align: top;
+            padding-top: 4px;
+            height: 55px;
+            display: block;
+        }
+
+/*
+    Third Row of the top bar
+*/
+
+.my-navbar 
+{
+  background-color: #000;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+    color:#fff;
+}
+
+.my-navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.my-navbar li a 
+{
+  display: block;
+  padding: 10px 10px;
+  text-decoration: none;
+  text-align: center;
+  color:#fff;
+}
+
+.my-navbar li a:hover,
+.my-navbar .menu-btn:hover {
+  background-color: #1f1f1f;
+}
+/* menu */
+
+.my-navbar .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+    color:#fff;
+}
+
+/* menu icon */
+
+.my-navbar .menu-icon {
+  cursor: pointer;
+    color:#fff;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none; 
+}
+
+.my-navbar .menu-icon .navicon {
+  background: #fff;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+
+}
+
+.my-navbar .menu-icon .navicon:before,
+.my-navbar .menu-icon .navicon:after {
+  background: #fff;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.my-navbar .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.my-navbar .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.my-navbar .menu-btn {
+  display: none;
+    color:#fff;
+}
+
+.my-navbar .menu-btn:checked ~ .menu {
+  max-height: 240px;
+    color:#fff;
+}
+
+.my-navbar .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+    color:#fff;
+}
+
+.my-navbar .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.my-navbar .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.my-navbar .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.my-navbar .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* SPECIAL: Responsive Bar 48em = 800px */
+
+@media (min-width: 800px) {
+  .my-navbar 
+    {   
+        background-color: transparent;
+        width: 100%;
+        height: 40px;
+        color:#fff;
+        padding-top: 1px;
+        text-align: center;
+    }
+    
+    .my-navbar ul 
+    {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        overflow: hidden;
+        background-color: transparent;
+    }
+    
+    .my-navbar li
+    {
+        display: inline-block;
+        position: relative;
+    }
+    
+    .my-navbar li a
+    {
+        text-align: left;
+    }
+    
+     .my-navbar li.nav-spec
+    {
+        display: none;
+    }
+    
+    .my-navbar li.nav
+    {
+        position: relative;
+    }
+
+    
+  .my-navbar li.nav a 
+    {
+        list-style: none;
+        font-size: 10pt;
+        color: white;
+        text-align: center;
+        padding: 8px 40px 11px 40px;
+        text-decoration: none;
+    }
+
+.my-navbar li a:hover,
+.my-navbar .menu-btn:hover {
+  background-color: #fff;
+}
+  .my-navbar .menu {
+      display: inline-block;
+    max-height: none;
+  }
+  .my-navbar .menu-icon {
+    display: none;
+  }
+
+    .my-navbar li.nav a:hover
+        {
+            font-size: 10pt;;
+            color: #000;
+            background-color: #fff;
+            padding-bottom: 11px;
+            border-radius: 0px 0px 10px 10px;
+        }
+
+     li.nav a.active
+        {
+            font-size: 10pt;;
+            color: #000;
+            background-color: #fff;
+            padding-bottom: 11px;
+            border-radius: 0px 0px 10px 10px;
+        }
+    
+   .my-navbar .dropdown 
+        {
+            position: relative;
+            display: inline-block !important;
+            width: 225px;
+            text-align: left;
+            top: -15px;
+            margin-left: 0%;
+            padding-bottom: 11px;
+
+        }
+    
+    .my-navbar .dropdown a
+    {
+        font-size: 10pt;
+        color:#fff;
+        text-decoration: none;
+    }
+
+    .dropdown-content 
+        {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #000;
+            width: 250px;
+            margin-left: -25px;
+            padding-top: 3px;
+        }
+
+    .dropdown-content a 
+        {
+            font-size: 10pt;
+            color: #fff;
+            padding: 3px 30px;
+            text-decoration: none;
+            display: block;
+        }
+
+    .dropdown-content a:hover 
+        {
+            background-color: #363636;
+        }
+
+    .dropdown:hover .dropdown-content 
+        {
+            display: block;
+        }
+
+    .dropdown hr
+        {
+            border-color:#1f1f1f;
+            color: #1f1f1f;
+            background-color: #1f1f1f;
+            margin: 0 auto;
+            border: 1px solid;
+        }
+    
+}
+
+/*
+    Horizontal Bar for score result
+    Along with divs and list
+*/
+    .result a 
+    {
+        text-decoration: none;
+    }
+
+    .result-top
+    {
+        font-size: 7pt;
+        color:#999;
+        border-bottom: 1px solid #999;
+        padding-top: 3px;
+        padding-left: 0px;
+        margin-left: -7px;
+        line-height: 10px;
+        display: block;
+        text-align:center;
+        letter-spacing: -0.3px;
+    }
+    
+    .result-content
+    {
+       font-size: 8pt;
+        color:#000;
+        padding: 1px 1px;
+        text-align:center;
+    }
+
+    .result-content table, tr
+    {
+        background: transparent;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .result-content td
+    {
+        background: #fff;
+    }
+
+    .result-cell 
+    {
+        width: 91px;
+        height: 55px;
+        background:transparent;
+        padding-right: 15px;
+        margin-right: 15px;
+    }
+
+    .result-cell.is-selected 
+    {
+      background: transparent;
+    }
+
+    .carousel-post
+    {
+        width: 92px;
+        height: 55px;
+        border-right: 1px solid #999;
+    }
+
+      .result-box 
+    {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -1px;
+        right: 0;
+        background: #363636;
+        color: #fff;
+        height:100%;
+        visibility: hidden;
+        opacity: 0;
+        -webkit-transition: visibility opacity 0.2s;
+        text-align: center;
+        margin: 0;
+        width:96%;
+        line-height: 55px;
+        margin-left: -6px;
+        z-index: 1;
+    }
+     .result-cell:hover .result-box {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .result-box a
+    {
+        color:#fff;
+        text-decoration: none;
+    }
+
+/*
+    Link style for each div
+*/
+        
+    .manager a
+        {
+            color: #999;
+            text-align: center;
+            text-decoration: none; 
+            font-size: 8pt;
+        }
+    
+    .about a
+        {
+            color: #000;
+            text-align: center;
+            padding: 0px 15px;
+            text-decoration: none; 
+        }
+
+    .my-navbar .dropdown 
+        {
+           display: none;
+        }
+    .dropdown-content
+{
+    display: none;
+}
+
+
+/*
+    Buttons
+*/
+        
+    .btn
+        {
+            border-radius: 10px;
+            text-align: center;
+            padding: 8px;
+            text-decoration: none; 
+        }
+    .btn:hover
+        {
+            border-radius: 10px;
+            text-align: center;
+            padding: 8px;
+            text-decoration: none; 
+        }
+
+    .btn-flat
+        {
+            font-family: Industry Inc;
+            border-radius: 10px;
+            background-color: #e7e7e7; 
+            text-align: center;
+            font-size: 8pt;
+            padding: 10px;
+            color: #000;
+            text-decoration: none; 
+            box-shadow: none;
+            border:none;
+        }
+
+    .btn-flat:hover
+        {
+            border-radius: 10px;
+            background: #ddd;
+            text-align: center;
+            font-size: 8pt;
+            padding: 10px;
+            color: #000 !important;
+            text-decoration: none; 
+            cursor: pointer;
+        }
+        
+    .button 
+        {
+            border-radius: 10px;
+            background-color: #e7e7e7; 
+            text-align: center;
+            font-size: 8pt;
+            padding: 10px;
+            color: #000;
+            text-decoration: none; 
+        }
+    .button:hover
+        {
+            border-radius: 10px;
+            background: #ddd;
+            text-align: center;
+            font-size: 8pt;
+            padding: 10px;
+            color: #000 !important;
+            text-decoration: none; 
+        }
+
+    .btn-mag
+        {
+            background:#363636;
+            text-align: center;
+            padding: 3px 3px 6px 3px;
+            text-decoration: none; 
+            box-shadow: none;
+            border:none;
+            cursor: pointer;
+        }
+
+    .btn-bracket
+        {
+            background: #1f1f1f;
+            text-align: center;
+            color:#fff !important;
+            font-size: 13pt;
+            border-radius: 10px;
+            text-decoration: none;
+            padding: 11px;
+            margin: 10px;
+            display: inline-block;
+        }
+
+    .btn-bracket:hover
+        {
+            background: #999;
+            text-align: center;
+            color:#000 !important;
+            font-size: 13pt;
+            border-radius: 10px;
+            text-decoration: underline;
+            padding: 11px;
+            margin: 10px;
+        }
+    
+    .btn-add
+        {
+            font-family: Industry Inc;
+            border-radius: 10px;
+            background-color: darkgreen; 
+            text-align: center;
+            font-size: 14pt;
+            color: #fff;
+            text-decoration: none; 
+            box-shadow: none;
+            border:none;
+            cursor: pointer;
+        }
+
+    .btn-del
+        {
+            position: relative;
+            font-family: Industry Inc;
+            border-radius: 10px;
+            background-color: darkred; 
+            text-align: center;
+            font-size: 20pt;
+            color: #fff;
+            text-decoration: none; 
+            box-shadow: none;
+            border:none;
+            cursor: pointer;
+            top: -60px;
+    	    left: 390%;
+            z-index: 1;
+        }
+
+    .btn-del-tp
+        {
+            font-family: Industry Inc;
+            border-radius: 10px;
+            background-color: darkred; 
+            text-align: center;
+            font-size: 14pt;
+            color: #fff;
+            text-decoration: none; 
+            box-shadow: none;
+            border:none;
+            cursor: pointer;
+        }
+
+/* 
+    Moderator Buttons
+*/
+
+    .btn-mod-deactive
+{
+    padding: 5px;
+    font-size: 10pt;
+    background:#883a3a;
+    color:#fff !important;
+    border: 1px solid #b86666;
+    border-radius: 10px;
+    text-align: center;
+}
+
+    .btn-mod-deactive:hover
+    {
+        color:#999 !important;
+    }
+
+.btn-mod-active
+{
+    padding: 5px;
+    font-size: 10pt;
+    background:#b6d07d;
+    color:#000;
+    border: 1px solid #839361;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/*
+    Select/Input Style
+*/
+        
+    .choices 
+        {
+            width: 25%;
+            display:inline-block;
+            margin-right:15px;  
+        }
+
+    .inputText
+        {
+            width: 70%;
+        }
+
+/*
+    Table,td style
+*/
+        
+    table
+        {
+            width: 100%;
+            text-align: left;
+            vertical-align: middle;
+        }
+    tr:nth-child(even) 
+        {
+            background: #CCC;
+        }
+    tr:nth-child(odd) 
+        {
+            background: #FFF;
+        }
+
+        
+    td.padding-num
+        {
+            padding-left: 10px;
+        }
+
+        tr a 
+        {
+            display: block;
+            height: 100%;
+            padding: 10px;
+        }
+
+/*
+    Main Content Div
+*/
+
+    .content
+        {
+            background-color:#fff;
+            width: 71%;
+            display: block;
+            margin: auto;
+            margin-bottom: 40px;
+            padding: 0 10px 10px 10px;
+            font-size: 10pt;
+            min-height: 250px;
+        }
+
+    .content a
+        {
+            text-decoration: none; 
+            color:#000;
+        }
+
+    .content a:hover
+        {
+            text-decoration: none; 
+            color:#999;
+        }
+
+    body.body-welcome
+        {
+            background: url('../images/PS.png') no-repeat 50% 30%;
+            background-attachment: fixed;
+            background-color:#1f1f1f;
+            color:#fff;
+            font-size: 12pt;
+        }
+
+    .content-welcome
+        {
+            padding-top: 75px;
+            margin: auto;
+            width: 75%;
+        }
+
+    .content-welcome p
+        {
+            line-height: 15pt;
+        }
+
+/*
+    Div for Button Functions in each index page
+*/ 
+
+    .page-btn-position
+        {
+            float: right;
+            margin-top: -18px;
+            display: inline-block;
+            list-style-type: none;
+        }
+
+    .player-btn-position
+        {
+            float: right;
+            margin-top: -13px;
+            display: block;
+            padding-right: 5px;
+        }
+
+    .page-btn-position td
+        {
+            padding-top: 10px; 
+            padding-left: 2px;
+            padding-right: 2px;
+            padding-bottom: 0px;
+        }
+
+/*
+    League Buttons
+*/
+
+    #team-button
+    {
+        position: absolute;
+        top: 250px;
+        left: 9%;
+        width: 75px;
+    }
+
+    .team-nav
+    {
+        background: #fff;
+        font-size: 8pt;
+        padding: 10px;
+        display: block;
+        color:#000;
+        text-decoration: none;
+        border-radius: 10px 0px 0px 10px;
+        margin-bottom: 5px;
+    }
+
+    .team-nav:hover
+    {
+        background: #fff;
+        padding: 10px;
+        margin-left: -20px;
+        border-radius: 10px 0px 0px 10px;
+        margin-bottom: 5px;
+    }
+
+    .activeteam
+    {
+        background: #fff;
+        padding: 10px;
+        margin-left: -20px;
+        border-radius: 10px 0px 0px 10px;
+        margin-bottom: 5px;
+    }
+
+    .page {
+        display:none;
+        }
+
+        .page.active {
+        display:block;
+        }
+
+    /*
+        Div for ALL team display
+    */
+
+    .team-bracket-label
+    {
+        margin-top: -3px;
+        background:#999;
+        color:#000;
+        font-size: 18pt;
+        text-transform: uppercase;
+        line-height: 28px;
+        padding: 5px 5px 5px 15px;
+        margin-bottom: 10px;
+        display: block;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .team-bracket-container
+    {
+        width: 100%;
+        border-top: 1px dashed #000;
+        padding: 3px;
+        margin-bottom: 5px;
+        display: block;
+    }
+
+    .team-container
+    {
+        width: 200px;
+        height: 220px;
+        display: inline-block;
+        padding: 0px 2px;
+        text-align: center;
+    }
+
+    .team-img-container
+    {
+        width: 200px;
+        height: 200px;
+        border: 1px solid #000;
+        display: block;
+        list-style-type: none;
+        text-align: center;
+        margin: -0.5px;
+        overflow: hidden;
+        color:#000;
+        display: flex;
+        align-items: center;
+    }
+
+    .team-name-only a
+    {
+        display: block;
+        padding: 6px;
+    }
+
+    .team-name-only
+    {
+        width: 50%;
+        padding:0px;
+        margin: 3px;
+        border-radius: 5px;
+        border: 1px solid #000;
+    }
+
+    .league-container img, .team-container img
+    {
+        width: 200px;
+        height: auto;
+        margin-top: 5px;
+    }
+
+    .player-container img
+    {
+        width: auto;
+        height: 200px;
+        padding-bottom: 5px;
+        display: block;
+    }
+
+.league-container
+{
+    width: 200px;
+    height: 220px;
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+    vertical-align: top;
+    padding-bottom: 20px;
+}
+
+    .league-img-container
+    {
+        width: 200px;
+        height: 200px;
+        border: 1px solid #000;
+        display: block;
+        text-align: center;
+        overflow: hidden;
+        padding: 0px;
+        margin: 1px;
+        display: flex;
+        align-items: center;    
+    }
+
+    .league-leader
+    {
+        margin-top: 0px;
+        width: 29%;
+        padding: 3px;
+        color:#000;
+        display: inline-block;
+        text-align: left;
+        vertical-align: top;
+    }
+
+    .league-leader table
+    {
+        background:#fff;
+        border: 1px solid #1f1f1f;
+        padding: 0px 5px;
+    }
+
+    .league-leader tr a
+    {
+        padding: 0px;
+    }
+
+    .league-leader td
+    {
+        background:#fff;
+        font-size: 9pt;
+    }
+
+    .mvp-container
+    {
+        width: 40%;
+        height: auto;
+        border: 1px solid #1f1f1f;
+        clear: both;
+        display: inline-block;
+        margin: 0px 5px;
+    }
+
+    .mvp-title
+    {
+        font-size: 13pt;
+        display:block;
+        background: #363636;
+        color:#fff;
+    }
+
+    .mvp-each
+    {
+        padding: 5px;
+        display:block;
+        height: 84px;
+        border-bottom: 1px solid #363636;
+    }
+
+    .mvp-img
+    {
+        width: 80px;
+        height: 80px;
+        text-align: right;
+        overflow: hidden;
+        padding: 0px;
+        margin: 1px;
+        float:left;
+        display: flex;
+        align-items: center; 
+    }
+
+    .mvp-img img
+    {
+        width: 80px;
+        height: auto;
+    }
+
+    .mvp-info
+    {
+        padding-left: 20px;
+        height: 80px;
+        float:left; 
+        text-align: left;
+        font-size: 10pt;
+        display: block;
+        align-content: center;
+	padding-top: 10px;
+    }
+
+    .standing thead th
+    {
+        border-bottom: 2px solid #323232;
+        color:#fff;
+        font-size: 10pt;
+        font-weight: normal;
+        padding: 5px 5px 0px 5px;
+        text-align: left;
+    }
+
+    .standing
+    {
+            font-size: 12pt;
+   	    width: 90%;
+    	    margin-top: -10px;
+    	    margin-left: auto;
+    	    margin-right: auto;  
+    }
+
+    .league-team-name
+    {
+        padding-left: 10px;
+        text-align: left;
+    }
+
+    .win-lose
+    {
+        width: 5%;
+        text-align: center;
+    }
+
+
+
+/*
+    Div for Team View, Player Display
+*/
+
+    .team-leader
+        {
+            margin: -15px 0px  0px 0px;
+            width: 19%;
+            border: 1px solid #000;
+            color:#000;
+            display: inline-block;
+            text-align: center;
+            vertical-align: top;
+        }
+
+    .team-standing
+        {
+            width: 30%;
+            text-align: center;
+            font-size: 25pt;
+            display: inline-block;
+            padding: 0;
+            margin: -10px 5px;
+            border: 1px solid #000;
+        }
+
+    .team-game-stats
+        {
+            margin-top: -10px;
+            text-align: center;
+            border: 1px solid #000;
+        }
+	
+	.team-game-stats td
+        {
+	    font-size: 11pt;
+            padding-bottom: 5px;
+    	    padding-top: 5px;
+        }
+
+	
+
+    .team-game-stats th
+        {
+            background:#363636;
+            color:#fff;
+            font-size: 8pt;
+            font-weight: normal;
+        }
+
+    .player-container
+        {
+            width: 200px;
+            height: 270px;
+            border: 1px solid #000;
+            display: inline-block;
+            list-style-type: none;
+            margin: 10px;
+            overflow: hidden;
+        }
+
+    .player-container a:hover
+        {
+            color:#000;
+            text-decoration: none;
+        }
+
+/*
+    Divs for Player Index Page
+*/
+
+    .content-player
+        {
+            background-color:#fff;
+            width: 80%;
+            display: block;
+            margin: auto;
+            padding: 10px 10px; 
+            font-size: 10pt;
+        }
+
+    .search-bar
+        {
+            background-color:#000;
+            width: 100%;
+            border-bottom: 1px solid #fff;
+            height: 30px;
+            display: block;
+            color:#fff !important;
+            padding: 5px 10px;
+            margin: -10px -10px 0px -10px;
+            text-align: center;
+        }
+
+    .search-box
+        {
+            background-color:#363636;
+            font-family: Industry Inc;
+            width: 250px;
+            height: 30px;
+            color:#fff;
+            padding: 5px;
+            margin: 0px;
+            line-height: 30px;
+            border: none;
+            box-shadow: none;
+            display: inline;
+        }
+
+    .alpha-bar
+        {
+            background-color:#000;
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+            color:#fff;
+            font-size: 15pt;
+            text-align: center;
+            padding: 5px 10px;
+            margin: 0px -10px;
+        }
+
+    .alpha-bar a
+        {
+            font-size: 15pt;
+            color:#fff;
+            text-decoration: none;
+            padding: 0px 9px;
+
+        }
+
+    .alpha-bar a:hover
+        {
+            font-size: 15pt;
+            color:#fff;
+            text-decoration: none;
+            padding: 0px 9px;
+
+        }
+
+    .alpha-bar .disabled
+
+    {
+        color:#3f3f3f;
+        pointer-events: none;
+        cursor: default;
+    }
+
+    .display-player
+        {
+            font-size: 11pt;
+            margin-bottom: 40px;
+        }
+
+    .alpha
+        {
+            border-bottom: 1px solid #999;
+            padding: 30px 10px;
+            margin: -10px -10px 0px -10px;
+            vertical-align: top;
+            display: block;
+            overflow: auto;
+            clear: both;
+        }
+
+    .playerpage
+        {
+            color:#000;
+            text-decoration: none;
+            list-style: none; 
+            width: 33%;
+            display: inline-block;
+            padding: 3px 0px;
+        }
+
+    .player-names
+        {
+            float:right;
+            width: 90%;
+        }
+
+    .cap 
+        {
+            margin: -20px -10px;
+            vertical-align: top;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 50pt;
+            color:#999;
+            width: 10%;
+            height: 100%;
+            float: left;
+        }
+
+.cap:hover
+        {
+            color:#000 !important;
+        }
+
+/*
+    Div/design for Player Full View
+*/
+
+.player-img
+{
+    float: left;
+    width:200px;
+    height: 200px;
+    background: #999;
+    border: 3px solid #000;
+    margin-top: -10px;
+    margin-left: -10px;
+    margin-right: 10px;
+    margin-bottom: -125px;
+    padding-bottom: 0px;
+    overflow: hidden;
+}
+
+.player-img img
+{
+    width: auto;
+    height: 200px;
+}
+
+.player-profile-top
+{
+    width: 425px;
+    float: left;
+    font-size: 18pt;
+}
+
+.player-profile-top-container
+{
+    padding-top: 10px;
+    width: 125px;
+    height: 125px;
+    margin-right: 10px;
+    overflow: hidden;
+    display: inline-block;
+    float: left;
+    display: flex;
+    align-items: center; 
+}
+
+.player-profile-top-container img
+{
+    width: 125px;
+    height: auto;
+}
+
+.player-profile-top table
+{
+    width: 68%;
+    height: 125px;
+    padding-top: 10px;
+}
+
+
+.jersey-num
+{
+    width: 60px;
+    height: 60px;
+    padding-right: 0;
+    font-size: 30pt;
+    text-align: right;
+}
+
+.name
+{
+    font-size: 17pt;
+    padding-top: 15px;
+    height: 20px;
+    line-height: 20px;
+}
+
+.pos
+{
+    background: #fff;
+    font-size: 10pt;
+    padding: 0;
+    vertical-align: top;
+    height: 20px;
+}
+
+.team-name
+{
+    vertical-align: top;
+    padding: 0;
+    margin-top: -5px;
+}
+
+.player-profile
+{
+    float: left;
+    margin-top: 12px;
+    margin-left: 0px;
+    padding-left: 205px;
+}
+
+.player-profile ul
+{
+    list-style-type: none;
+    margin: -10px 0px 0px 0px;
+    padding: 0;
+    overflow: hidden;
+    
+}
+
+.player-profile li
+{
+    float: left;
+    padding-right: 70px;
+    font-size: 25pt;
+    height: 45px;
+}
+
+
+.player-stats
+{
+    padding-top: 25px;
+    float: right;
+    width: 30%;
+}
+
+.player-stats ul
+{
+    display: inline-block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.player-stats li
+{
+    float:left;
+    padding-right: 10px;
+    font-size: 15pt;
+    text-align: center;
+}
+
+
+.profile-button
+{
+    font-size: 8pt;
+    padding: 15px 0px 0px 10px;
+    margin:0; 
+    float: right;
+    list-style: none;
+    vertical-align: bottom;
+    width: 100px;
+}
+
+.profile-button a
+{
+    padding: 0px;
+    color:#000;
+}
+
+.profile-button a:hover
+{
+    padding: 0px;
+    color:#000;
+}
+
+.player-stats-bg
+{
+    background: url('../images/PolyButton.png') no-repeat 50% 30%;
+    background-size: 80px;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    font-size: 23pt;
+}
+
+.btn-player-profile
+{
+    background: transparent;
+    font-family: Industry Inc;
+    font-size: 8pt;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-shadow: none;
+    color:#000;
+}
+
+.btn-player-profile:hover
+{
+    cursor: pointer;
+}
+
+.sub
+{
+    font-size: 11pt;
+    float: right;
+    padding-left: 3px;
+    display: inline-block;
+    vertical-align: bottom;
+    line-height: 40pt;
+}
+
+.stats thead th
+{
+    border-top: 15px solid #323232;
+    background: #323232;
+    color:#fff;
+    font-size: 8pt;
+    font-weight: normal;
+    padding: 2px;
+}
+
+.stats
+{
+    width: 102%;
+    text-align: center;
+    margin-top: -10px;
+    margin-left: -10px;
+    clear: both;
+}
+
+.stats td
+{
+    font-size: 11pt;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+
+
+.game-date
+{
+    font-size: 10pt !important;
+    font-weight: normal;
+}
+
+/*
+GAME INDEX formerly SCHEDULE
+*/
+
+    .schedule
+        {
+            text-align: center;
+            padding: 0;
+            margin: 0 -10px;
+            width: 102%;
+            border-bottom: 5px solid #363636;
+            border-collapse: collapse;
+        }
+    
+
+
+
+    .col-sched-mid
+        {
+            background: url('../images/vs.png') 50% no-repeat;
+            width: 22%;
+            text-align: center;
+            color:#fff;
+            font-size: 14pt;
+            line-height: 25px;
+            height: 120px;
+        }
+
+    .sched-bg
+        {   
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: center center no-repeat;
+            overflow: hidden;
+            opacity: .35;
+            width: 100%;
+        }
+
+    .col-sched
+        {
+            font-size: 20pt;
+            width:39%;
+            margin: 0;
+            padding: 0;
+            line-height: 30px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+.col-sched ul
+{
+    list-style-type: none;
+    display: inline;
+    margin: 0;
+    padding: 0;
+    
+}
+.col-name
+{
+    list-style-type: none;
+    display: inline;
+    vertical-align: top;
+    font-size: 20pt;
+}
+
+.col-score
+    {
+        font-size: 54pt;
+        list-style-type: none;
+        display: inline;
+        margin: 0;
+        padding: 0px 15px;
+        width: 100px;
+        text-align: center;
+    }
+
+
+    /*
+        Game Page
+    */
+    .game-final-score
+        {
+            width: 100%;
+            text-align: center;
+            background: #fff;
+            padding: 0px 10px;
+        }
+
+    .game-stats
+        {
+            width: 100%;
+            text-align: center;
+            background: #fff;
+            padding: 0px 10px;
+        }
+
+    .game-stats a
+        {
+            text-decoration: none;
+            padding: 0px;
+            color: #000;
+            font-size: 10pt;
+        }
+
+    .game-stats thead th, .game-final-score thead, th
+        {
+            background: #323232;
+            color:#fff;
+            font-size: 8pt;
+            font-weight: normal;
+            padding: 2px;
+        }
+
+    .game-stats td, .game-final-score td
+        {
+            font-size: 11pt;
+	        padding-top: 5px;
+    	    padding-bottom: 5px;
+        }
+    
+    .game-team-logo
+    {
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+        margin: 5px 10px 0px 10px;
+        display: flex;
+        align-items: center; 
+    }
+
+     .game-team-logo img
+    { 
+        width: 200px;
+        height: auto;
+    }
+
+        .game-leader-container
+    {
+        background:#fff;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .game-leader
+    {
+        width: 35%;
+        display: inline-block;
+        padding: 0px 15px;
+    }
+
+    .game-leader table, tr
+    {
+        background:#fff;
+    }
+
+    .game-leader td
+    {
+        background:#fff;
+        width: 100px;
+        height: 100px;
+        font-size: 15pt;
+        text-align: center;
+    }
+
+
+    .game-player-container
+    {  
+        width: 130px;
+        height: 130px;
+        overflow: hidden;
+        border-radius: 50%;
+        background:#fff;
+        display: block;
+    }
+
+    .game-player-container img
+    {
+        width: 140px;
+        height: auto;
+	    margin-left: -5px;
+    }
+
+
+    li.date
+        {
+            text-align: center;
+            font-size: 15pt;
+        }
+    li.time
+        {
+            text-align: center;
+            font-size: 10pt;
+            padding-bottom: 10px;
+        }
+    li.venue
+        {
+            text-align: center;
+            font-size: 30pt;
+            line-height: 30px;
+        }
+    li.venue-lower
+        {
+            text-align: center;
+            font-size: 30pt;
+            line-height: 30px;
+            padding: 5px 80px;
+            color:#fff;
+            list-style-type: none;
+        }
+
+    li.vs
+        {
+            background: url('../images/vs.png') no-repeat 50%;
+            background-size: 150px 120px;
+            font-size: 40pt;
+            height: 120px;
+            text-align: center;
+        }
+
+    .triangle
+        {
+            font-size: 25pt;   
+            background: url("../images/vs.png")  no-repeat;
+            background-size:180px 120px;
+            width:100%;
+            height:120px;
+            background-position: center;
+            position: absolute;
+            margin-top: -40px;
+            color:#fff;
+            text-align:center;
+            line-height: 80px;
+
+        }
+
+    .pending-triangle
+        {
+                font-size: 40pt;   
+                background: url("../images/vs.png")  no-repeat;
+                background-size:180px 120px;
+                width:100%;
+                height:120px;
+                background-position: center;
+                position: absolute;
+                margin-top:200px;    
+                color:#fff;
+                text-align:center;
+
+            }
+
+    .pending-game
+        {
+            padding-top: 50px;
+            width:100%;
+            text-align: center;
+        }
+
+    .pending-game ul
+        {
+            list-style-type: none;
+            display: inline-block;
+            margin-left: -40px;
+        }
+
+    .pending-game tr a
+        {
+            padding: 0px;
+        }
+    .pending-game-top
+        {
+            background:#000 !important;
+            padding: 8px 5px;
+            color:#fff;
+            vertical-align: top;
+        }
+
+
+    .pending-game-space
+        {
+            background: transparent !important;
+            height: 5px;
+        }
+
+    .pending-game-bottom
+        {
+            background:#fff !important;
+            padding: 8px 5px;
+            vertical-align: top;
+        }
+
+    .pending-game-team-name
+        {
+            display: inline-block;
+            width: 70%;
+            font-size: 25pt;
+            padding: 18px 5px 0px 5px;
+            line-height: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+    .game-team
+        {
+            background: #fff !important;
+            color:#000 !important;
+            font-weight: normal;
+            font-size: 12pt !important;
+            border-bottom: 2px solid #000;
+            text-align: left;
+        }
+
+    .pending-game-home
+        {
+            display: inline-block;
+            list-style-type: none;
+            padding: 10px 0px;
+            vertical-align: top;
+            text-align: left;
+            min-width: 100px;
+            min-height: 100px;
+            overflow: auto;
+            position: relative;
+            z-index: 1;
+        }
+
+
+    .pending-game-away
+        {
+            display: inline-block;
+            list-style-type: none;
+            padding: 10px 0px;
+            vertical-align: top;
+            text-align: right;
+            min-width: 100px;
+            min-height: 100px;
+            overflow: auto;
+            position: relative;
+            z-index: 1;
+        }
+
+    .pending-game-away a, .pending-game-home a
+        {
+            font-size: 16pt;
+            color:#000;
+            text-decoration: none;
+        }
+
+.pending-game-team-name a
+{
+    color:#000;
+            text-decoration: none;
+}
+    .game-home
+        {
+            text-align: right;
+            width: 45%;
+    	    padding-right: 10px;
+        }
+    .game-away
+        {
+            text-align: left;
+            width: 45%;
+	    padding-left: 10px;
+        }
+
+    .finished-game
+        {
+            padding-top: 22px;
+            width:100%;
+            text-align: center;
+        }
+
+    .finished-game-score
+        {
+           width:100%;
+            text-align: center;
+        }
+
+    .finished-game ul
+        {
+            list-style-type: none;
+            display: inline-block;
+            margin-left: -40px;
+            padding-top: 30px;
+        }
+
+    .finished-game-home
+        {
+            font-size: 55pt;
+            display: inline-block;
+            list-style-type: none;
+            vertical-align: top;
+            text-align: left;
+            line-height: 100px;
+            margin: auto;
+	    width:20%;
+        }
+    .finished-game-away
+        {
+            font-size: 55pt;
+            display: inline-block;
+            list-style-type: none;
+            vertical-align: top;
+            text-align: right;
+            line-height: 100px;
+            margin: auto;
+	    width:20%;
+        }
+
+    .game-player-name
+        {
+            width: 200px;
+        }
+
+    .game-stats input
+        {
+            width: 40px;
+        }
+
+    .game-score
+        {
+            display: inline-block;
+            list-style-type: none;
+            word-spacing: 20px;
+            text-align: center;
+            line-height: 50px;
+        }
+
+    .game-score img
+        {
+            width: 50px;
+            height: 50px;
+            padding: 0px 10px;
+        }
+
+    .blank-space
+    {
+        width:100%;
+        background:#fff;
+        display:block;
+        font-size: 10pt;
+    }
+
+
+/*
+    Other divs
+*/
+        
+    .error 
+        {
+            background-color: lightcoral;
+            border: 2px solid darkred;
+            font-size: 10pt;
+            color: firebrick;
+            width: 50%;
+            padding: 10px 10px;
+            margin: 12px auto;
+            display: block;
+        }
+        
+    .col
+        {
+            padding: 10px 10px;
+            display: block;
+        }
+
+    .col-inline
+        {
+            width: 30%;
+            padding: 10px 15px;
+            display: inline-block;
+        }
+
+    .col-inline-label
+        {
+           text-align: right;
+            padding-right: 15px;
+            width: 80%;
+            font-size: 11pt;
+            display: inline-block; 
+        }
+
+    .col-title
+        {
+            text-align: right;
+            padding-right: 15px;
+            width: 15%;
+            font-size: 11pt;
+            display: inline-block;
+        }
+
+    #col-border, #dropdown
+        {
+            border: 1px solid #323232;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px; 
+            padding: 8px;
+        }
+
+    .datepicker-border
+        {
+            border: 1px solid #323232;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px; 
+            padding: 8px;
+        }
+
+    .forced-side
+    {
+        float: right;
+        width: 82%;
+        color:#000;
+    }
+
+
+/*
+    Other GENERAL classes
+*/
+    .transparent
+        {
+            background: transparent !important;
+        }
+
+    .bg-white
+        {
+            background: #fff !important;
+        }
+
+    .yin
+        {
+           text-decoration: none;
+            color:#fff;
+        }
+
+    .yang
+        {
+           text-decoration: none;
+            color:#000;
+        }
+
+/*
+    For GALLERY page
+*/
+    .gallery
+        {
+            width: 260px;
+            height: 400px;
+            display: inline-block;
+            text-align: center;
+            margin: -3px -2px;
+            overflow: hidden;
+            padding:0px;
+        }
+
+    .gallery img 
+        {
+            min-width: 48px;
+            min-height: 48px;
+            width: 260px;
+            height: 400px;            
+	        position: static; 
+            z-index: -1;     
+            background-repeat: no-repeat;
+            background-image: url(../images/loading.gif);
+        }
+        
+    .gallery-button
+        {
+            display: inline-block;
+            margin: 0;
+            vertical-align: top;
+            color:#000;
+            font-size: 30pt;
+            width: 26px;
+        }
+    .gallery-container
+        {
+            text-align: center;    
+        }
+
+    .gallery-button a 
+        {
+            color:#fff;
+            text-decoration: none;
+        }
+
+    .gallery-button a:hover
+        {
+            color:#000;
+            text-decoration: none;
+        }
+
+
+
+    #fileUpload input[type=file] 
+        {
+
+            text-align: right;
+            outline: none;
+            color:#000;
+            cursor: pointer;
+        }
+
+    #fileUpload::-webkit-file-upload-button
+        {
+            font-family: Industry Inc;
+            border-radius: 10px;
+            background-color: #e7e7e7; 
+            text-align: center;
+            font-size: 8pt;
+            padding: 10px;
+            color: #000; 
+            box-shadow: 0;
+            border: none;
+        }
+
+    #fileUpload::-webkit-file-upload-button:hover
+        {
+            background: #ddd;
+            text-decoration: none; 
+        }
+
+    #preview img
+        {
+            background: #999;
+            border: 2px dotted #323232;
+            width: 100px;
+            height: 100px;
+            padding: 5px;
+            margin: 5px;
+        }    
+	
+
+/*
+For PROMPTS
+*/
+
+.alert-box-error
+{
+    margin-top: 10px;
+    width: 75%;
+    margin: auto;
+    padding: 10px;
+    font-size: 10pt;
+    background:#d7a4a4;
+    color:#883a3a;
+    border: 1px solid #b86666;
+    border-radius: 10px;
+}
+
+.alert-box-error p
+{
+    line-height: 5px;
+}
+
+.alert-box-success
+{
+    margin-top: 10px;
+    background:#b6d07d;
+    color:#636b52;
+    border: 1px solid #839361;
+    border-radius: 10px;
+     width: 75%;
+    margin: auto;
+    padding: 10px;
+    font-size: 10pt;
+    text-align: center;
+}
+/*
+Social Button
+*/
+
+    #social
+    {
+        position: absolute;
+        top: 1px;
+        left: 190px;
+        z-index: 1;
+    }
+
+#social img 
+{
+    width: 20px;
+    height: 20px;
+    padding: 0px 2px;
+}
+
+
+
+#mini-logo
+{
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    z-index: 2;
+}
+
+#mini-logo img
+{
+    width: 50px;
+    height: 50px;
+}
+
+/*
+    Class for topbar to keep on top
+*/
+        
+    .stayontop
+        {
+            background: url('../images/bgx-2.png') repeat-x;
+            position:fixed;
+            top: 0px;
+            left: 0px;
+            list-style-type: none;
+            width: 100%;
+            height: 150px;
+            z-index: 2;
+        }
+        
+    #topbar
+        {
+            background: url('../images/bgx-2.png') repeat-x;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            vertical-align: top;
+            list-style-type: none;
+            width: 100%;
+            height: 150px;
+            z-index: 2;
+        }
+
+/*
+    Main/content container
+*/
+    #container 
+        { 
+            padding-top: 180px;
+        }
+
+    #container-gallery
+        {
+            padding: 142px 0px 0px 0px;
+            margin: 0px -8px;
+            margin-bottom: 40px;
+        }
+
+#sched-btn
+{
+    position: absolute;
+    top: 230px;
+    left: 10px;
+    z-index: 1;
+}
+
+#rules
+{
+    margin-top: -3px;
+}
+
+#standing
+{
+    margin-top: -3px;
+}
+
+#team
+        {
+    	    margin-top: -3px;
+        }
+#footer
+{
+    position: absolute;
+    padding: 0;
+    margin-top: 10px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: #000;
+    font-size: 70%;
+    color:#fff;
+}
+/* ADDITIONAL TEAM*/
+.tp-creator
+{
+    width: 100%;
+    margin: 5px 0px;
+    display: block;
+}
+
+ .tp-col
+{
+    width: 20%;
+    padding: 5px 5px;
+    display: inline-block;
+    text-align: center;
+}
+
+.tp-col-title
+{
+    font-size: 11pt;
+    display: block;
+}
+
+/* Additional stats(tab) */
+.top-stats
+{
+    padding: 8px 15px;   
+}

@@ -1,0 +1,520 @@
+/* 
+Tablet: 1024px w x 768px h x 820px h
+Landscape
+*/
+@media screen and (width : 1024px)
+and (min-height: 768px)
+and (max-height: 820px)
+and (orientation: landscape)
+{
+    
+    h5 
+    {
+        letter-spacing: 1px;
+        margin-right: 1px;
+    }
+
+    .my-navbar .dropdown 
+    {
+        position: relative;
+        display: inline-block !important;
+        width: 225px;
+        text-align: left;
+        top: -15x;
+        margin-left: 20%;
+    }
+    
+    .result-top 
+    {
+        margin-left: 0px;
+    }
+    
+    .result-box 
+    {
+        width: 87%;
+        margin-left: 0;
+        z-index: 1;
+    }
+    
+    .alpha-bar a 
+    {
+        font-size: 14pt;
+        padding: 0px 5px;
+    }
+    
+    .player-names 
+    {
+        float: right;
+        width: 88%;
+    }
+    
+    .playerpage 
+    {
+        width: 49%;
+    }
+    
+    .pending-game-team-name 
+    {
+       width: 55%;
+    }
+    
+    .finished-game-away, .finished-game-home
+    {
+        width: 35%;
+    }
+    
+    .col-inline 
+    {
+        width: 45%;
+        padding: 10px 10px;
+        display: inline-block;
+    }
+    
+    .league-leader 
+    {
+        margin-top: -20px;
+        width: 31%;
+        padding: 3px;
+        color: #000;
+        display: inline-block;
+        text-align: left;
+        vertical-align: top;
+        margin-bottom: 20px;
+    }
+    
+    .game-stats 
+    {
+        display: table;
+        padding: 0px;
+    }
+    
+    .player-img 
+    {
+        float: none;
+        width: 200px;
+        height: 200px;
+        background: #999;
+        border: 3px solid #000;
+        margin-top: 10px;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+        padding-bottom: 0px;
+        overflow: hidden;
+        display: inline-block;
+    }
+    
+    .player-profile-top 
+    {
+        width: 485px;
+        float: right;
+        font-size: 18pt;
+    }
+    
+    .player-profile-top table 
+    {
+        width: 71%;
+        height: 125px;
+        padding-top: 10px;
+    }
+    
+    .player-stats 
+    {
+        padding-top: 0;
+        float: right;
+        width: 40%;
+        margin-top: -105px;
+    }
+    
+    .player-profile 
+    {
+        float: right;
+        margin-top: 12px;
+        margin-left: 0px;
+        padding-left: 210px;
+    }
+    
+    .player-profile li:last-child
+    {
+        padding-right: 0px;
+    }
+
+    .stats thead th 
+    {
+        border-top: 1px solid #323232;
+        background: #323232;
+        color: #fff;
+        font-size: 8pt;
+        font-weight: normal;
+    }
+    
+    #team-button 
+    {
+        position: absolute;
+        top: 250px;
+        left: 7%;
+        width: 75px;
+    }
+    
+    .mvp-container 
+    {
+        width: 45%;
+        height: auto;
+        margin: 0px 2px;
+        display: inline-block;
+    }
+    
+    .mvp-each 
+    {
+        padding: 5px;
+        display: block;
+        height: 80px;
+        border-bottom: 1px solid #363636;
+    }
+    
+    .mvp-img 
+    {
+        width: 80px;
+        height: 80px;        
+    }
+    
+    .mvp-img img 
+    {
+        width: 80px;
+        height: auto;
+    }
+    
+    .mvp-info 
+    {
+        padding-left: 5px;
+	padding-top: 10px;
+        height: 80px;
+        font-size: 10pt;
+    }
+}
+
+/* 
+Tablet: 1024px x 768px
+Portrait
+*/
+
+@media screen and (min-width : 768px)
+and (max-width : 800px)
+and (height: 1024px)
+and (orientation: portrait)
+{
+    
+    h5 
+    {
+        letter-spacing: 1px;
+    }
+    
+    .logo 
+    {
+        margin-left: 35px;
+        z-index: 4;
+    }
+    
+    #mini-logo 
+    {
+        top: 5px;
+        left: 20px;
+        z-index: 5;
+    }
+    
+    #social 
+    {
+        left: 170px;
+    }
+    
+    .alpha-bar 
+    {
+        height: auto;
+    }
+    
+    .alpha-bar a 
+    {
+        font-size: 14pt;
+        padding: 0px 12px;
+    }
+
+    .my-navbar .dropdown 
+    {
+       display: none;
+    }
+    .dropdown-content
+    {
+        display: none;
+    }
+
+    .result-cell 
+    {
+        width: 110px;
+    }
+    
+    .carousel-post 
+    {
+        width: 98px;
+    }
+    
+    .result-top 
+    {
+        margin-left: 0px;
+    }
+    
+    .result-box 
+    {
+        width: 81%;
+        margin-left: 0;
+        z-index: 1;
+    }
+    
+    .playerpage 
+    {
+        width: 45%;
+    }
+    
+    .pending-game-team-name 
+    {
+        width: 70%;
+    }
+    
+    .finished-game-away, .finished-game-home
+    {
+        width: 25%;
+    }
+    
+    .col-inline 
+    {
+        width: 45%;
+        padding: 10px 10px;
+        display: inline-block;
+    }
+    
+    .league-leader 
+    {
+        margin-top: -20px;
+        width: 44%;
+        padding: 3px;
+        color: #000;
+        display: inline-block;
+        text-align: left;
+        vertical-align: top;
+        margin-bottom: 20px;
+    }
+    
+    .game-stats td
+    {
+        min-width: 50px;
+    }
+    
+    .game-player-name
+    {
+        min-width: 150px;
+    }
+    
+    .player-img 
+    {
+        float: none;
+        width: 150px;
+        height: 150px;
+        background: #999;
+        border: 3px solid #000;
+        margin-top: 0;
+        margin-left: -10px;
+        margin-right: 0;
+        margin-bottom: 0;
+        padding-bottom: 0px;
+        overflow: hidden;
+        display: inline-block;
+    }
+    
+    .player-img img 
+    {
+        width: 150px;
+        height: auto;
+    }
+    
+    .player-profile-top 
+    {
+        width: 395px;
+        float: right;
+        font-size: 18pt;
+        margin-right: -10px;
+    }
+    
+    .player-stats 
+    {
+        padding-top: 0;
+        float: right;
+        width: 55%;
+        margin-top: -50px;
+    }
+    .player-profile 
+    {
+        float: right;
+        margin-top: 12px;
+        margin-left: 0px;
+        padding-left: 30px;
+    }
+    
+    .player-profile-top-container 
+    {
+        padding-top: 10px;
+        width: 100px;
+        height: 100px;
+        margin-right: 5px;
+        overflow: hidden;
+        display: flex;
+        align-content: center;
+        float: left;
+    }
+    
+    .player-profile-top-container img 
+    {
+        width: 100px;
+        height: auto;
+    }
+    
+    .player-profile-top table 
+    {
+        width: 73%;
+    }
+    
+    .team-name 
+    {
+        vertical-align: top;
+        padding: 0;
+        margin-top: -5px;
+        text-align: center;
+    }
+
+    .team-leader 
+    {
+        margin: -5px 0px 10px 0px;
+        width: 32%;
+        border: 1px solid #000;
+        color: #000;
+        display: inline-block;
+        text-align: center;
+        vertical-align: top;
+    }
+
+    .stats thead th 
+    {
+        border-top: 1px solid #323232;
+        background: #323232;
+        color: #fff;
+        font-size: 8pt;
+        font-weight: normal;
+    }
+    
+    .finished-game ul 
+    {
+        padding-top: 0;
+    }
+    
+   li.venue-lower 
+    {
+        text-align: center;
+        font-size: 5pt;
+        line-height: 30px;
+        padding: 0px 10px;
+        color: #fff;
+        list-style-type: none;
+    }
+    
+    .pending-triangle 
+    {
+        background-size: 160px 110px;
+        height: 110px;
+        margin-top: 255px;
+    }
+    
+    #team-button 
+    {
+        position: absolute;
+        top: 250px;
+        left: 4%;
+        width: 75px;
+    }
+    
+    .mvp-container 
+    {
+        width: 45%;
+        height: auto;
+        margin: 0px 2px;
+        display: inline-block;
+    }
+    
+    .mvp-each 
+    {
+        padding: 5px;
+        display: block;
+        height: 85px;
+        border-bottom: 1px solid #363636;
+    }
+    
+    .mvp-img 
+    {
+        width: 60px;
+        height: 60px;
+        margin-top: 10px;
+    }
+    
+    .mvp-img img 
+    {
+        width: 60px;
+        height: auto;
+    }
+    
+    .mvp-info 
+    {
+        padding-left: 5px;
+        height: 80px;
+        font-size: 10pt;
+    }
+    
+    .tp-col 
+    {
+        width: 30%;
+    }
+    
+    #col-border, #dropdown 
+    {
+        width: 90%;
+    }
+    
+    .scroll-table
+    {
+        width: 100%;
+        overflow-x: auto;
+        display: block;
+    }
+
+    .game-stats 
+    {
+        display: table;
+        padding: 0px;
+    }
+    
+    .team-game-stats
+    {
+        width: 100%;
+        display: table;
+    }
+    
+     .stats 
+    {
+        width: 100%;
+        text-align: center;
+        margin-top: 0;
+        margin-left: 0;
+        clear: both;
+    }
+    
+    .game-away, .game-home
+    {
+        width: 40%;
+    }
+}
