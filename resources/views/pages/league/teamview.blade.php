@@ -518,6 +518,32 @@
                 {{$sp['team']->display_name}} [{{$sp->position}}]<br>
                 <b style="font-size: 18pt;">{{$sp->statistical_points}} SP</b><br>
             </div>
+
+            <div class="mvp-careerstats-container">
+                <div class="mvp-careerstats"> 
+                    <div class="mvp-stats-label">
+                        PPG
+                    </div> 
+                    <b>{{$sp['careerstats']->pts}}</b> 
+                </div>
+
+                <div class="mvp-careerstats"> 
+                    <div class="mvp-stats-label">
+                        RPG
+                    </div> 
+                    <b>{{$sp['careerstats']->reb}}</b> 
+                </div>
+                
+                <div class="mvp-careerstats"> 
+                    <div class="mvp-stats-label">
+                        APG
+                    </div> 
+                    <b>{{$sp['careerstats']->ast}}</b> 
+                </div>             
+            </div>
+
+     
+            
         </div>
         @endforeach
         <!-- dito endforeach -->
@@ -538,6 +564,27 @@
                 {{$sp->last_name}}, {{$sp->first_name}}<br>
                 {{$sp['team']->display_name}} [{{$sp->position}}]<br>
                 <b style="font-size: 18pt;">{{$sp->defensive_statistical_points}}  SP</b><br>
+            </div>
+                
+            <div class="mvp-careerstats-container">
+                <div class="mvp-careerstats"> 
+                    <div class="mvp-stats-label">
+                        RPG
+                    </div> 
+                    <b>{{$sp['careerstats']->reb}}</b> 
+                </div>
+                <div class="mvp-careerstats"> 
+                    <div class="mvp-stats-label">
+                        SPG
+                    </div> 
+                    <b>{{$sp['careerstats']->stl}}</b> 
+                </div>
+                <div class="mvp-careerstats">  
+                    <div class="mvp-stats-label">
+                        BPG
+                    </div> 
+                    <b>{{$sp['careerstats']->blk}}</b> 
+                </div>
             </div>
         </div>
         @endforeach

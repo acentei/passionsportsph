@@ -146,6 +146,15 @@ html
             width: 150px;
             height: auto;
         }
+
+    .select-league
+        {
+            position: fixed;
+            top: 8px;
+            left: 23%;
+            font-size: 80pt;
+            height: 150px;
+        }
         
     .about
         {
@@ -374,7 +383,17 @@ html
             padding-bottom: 11px;
 
         }
-    
+
+    .nav-empty-leg
+    {
+        position: relative;
+        display: inline-block !important;
+        width: 225px;
+        text-align: left;  
+        padding-bottom: 11px;
+        top: 20px;
+    }
+
     .my-navbar .dropdown a
     {
         font-size: 10pt;
@@ -1059,14 +1078,14 @@ html
     {
         padding: 5px;
         display:block;
-        height: 84px;
+        height: 105px;
         border-bottom: 1px solid #363636;
     }
 
     .mvp-img
     {
         width: 80px;
-        height: 80px;
+        height: 100px;
         text-align: right;
         overflow: hidden;
         padding: 0px;
@@ -1091,7 +1110,35 @@ html
         font-size: 10pt;
         display: block;
         align-content: center;
-	padding-top: 10px;
+	    padding-top: 10px;
+    }
+
+    .mvp-careerstats-container
+    {
+        margin-top: -27px;
+        display: block;
+        clear: both;
+        float: right;
+    }
+
+    .mvp-careerstats
+    {
+        display: inline-block;
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+        border: 1px solid #000;
+        text-align: center;
+        margin-top: -6px;
+    }
+
+    .mvp-stats-label
+    {
+        text-align: center;
+        font-size: 8pt;
+        display: block;
+        padding-top: 5px;
+        margin-bottom: -5px;
     }
 
     .standing thead th

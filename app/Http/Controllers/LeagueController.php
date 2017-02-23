@@ -354,7 +354,7 @@ class LeagueController extends Controller
         //compute additionals for 
         
         //test computation
-        $SPLeaders = Player::with('team')
+        $SPLeaders = Player::with('team','careerstats')
                             ->where('league_id',$league[0]->league_id)
                             ->where('active',1)
                             ->where('deleted',0)
@@ -376,7 +376,7 @@ class LeagueController extends Controller
             }            
         }
         
-        $DSPLeaders = Player::with('team')
+        $DSPLeaders = Player::with('team','careerstats')
                             ->where('league_id',$league[0]->league_id)
                             ->where('active',1)
                             ->where('deleted',0)

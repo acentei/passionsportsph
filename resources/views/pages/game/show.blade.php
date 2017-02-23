@@ -15,7 +15,9 @@
                 <td>
                     
                     @if ($game->match_date >= date('Y-m-d',strtotime($now)))
-                        <a href="{{ route('game.edit', $game->game_id) }}" class="button">Edit Schedule</a>
+                        <a href="{{ route('game.edit', $game->game_id) }}" class="button">Edit Schedule</a> <br>
+
+                        <a href="{{ route('editStats', $game->game_id) }}" class="button">Update Game Stats</a>  
                     @else
                         <a href="{{ route('editStats', $game->game_id) }}" class="button">Update Game Stats</a>                      
                     @endif

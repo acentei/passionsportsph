@@ -22,12 +22,20 @@ class Player extends Model
     }    
     
      /**
-     *  get all team players in a game
+     *  get player game stats
      */
     public function gamestats()
     {
         return $this->belongsTo('App\Models\PlayerGameStats','player_id', 'player_id');
-    }    
+    }  
+
+    /**
+     *  get player career stats
+     */
+    public function careerstats()
+    {
+        return $this->belongsTo('App\Models\PlayerCareerStats','player_id', 'player_id');
+    }   
 }
 
 
